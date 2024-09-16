@@ -1,6 +1,8 @@
 ja:
   defaults:
     flash_message:
+      created: "%{item}を作成しました"
+      not_created: "%{item}を作成出来ませんでした"
       require_login: ログインしてください
   helpers:
     submit:
@@ -28,6 +30,9 @@ ja:
     create:
       success: ユーザー登録が完了しました
       failure: ユーザー登録に失敗しました
+  boards:
+    new:
+      title: 神泡掲示板作成
   header:
     login: ログイン
     logout: ログアウト
