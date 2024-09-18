@@ -10,8 +10,22 @@ class User < ApplicationRecord
 
   has_many :boards, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :goodmarks, dependent: :destroy
+  has_many :goodmark_boards, through: :goodmarks, source: :board
 
   def own?(object)
     id == object&.user_id
+  end
+
+  def goodmark(board)
+    goodmark_boards << board
+  end
+
+  def ungoodmark(board)
+    goodmark_boards.destroy(board)
+  end
+
+  def goodmark?(board)
+    goodmark_boards.include?(board)
   end
 end

@@ -19,5 +19,9 @@ Rails.application.routes.draw do
 
   resources :boards, only: %i[index new create show edit update destroy] do
     resources :comments, only: %i[create edit destroy], shallow: true
+    collection do
+      get :goodmarks
+    end
   end
+  resources :goodmarks, only: %i[create destroy]
 end

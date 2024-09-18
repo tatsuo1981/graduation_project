@@ -1,0 +1,7 @@
+<div class='ms-auto'>
+  <% if current_user.goodmark?(board) %>
+    <%= render 'ungoodmark', { board: board } %>
+  <% else %>
+    <%= render 'goodmark', { board: board } %>
+  <% end %>
+</div>
