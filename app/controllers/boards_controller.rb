@@ -1,6 +1,6 @@
 class BoardsController < ApplicationController
   def index
-    @boards = Board.includes(:user)
+    @boards = Board.includes(:user).page(params[:page])
   end
 
   def new
@@ -44,7 +44,7 @@ class BoardsController < ApplicationController
   end
 
   def goodmarks
-    @goodmark_boards = current_user.goodmark_boards.includes(:user).order(created_at: :desc)
+    @goodmark_boards = current_user.goodmark_boards.includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   private
