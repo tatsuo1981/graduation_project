@@ -36,6 +36,8 @@ ja:
       title: 神泡掲示板作成
     show:
       title: 神泡掲示板詳細
+    index:
+      title: 神泡掲示板一覧
   header:
     login: ログイン
     logout: ログアウト
