@@ -1,0 +1,3 @@
+<%= turbo_stream.replace "goodmark-button-for-board-#{@board.id}" do %>
+  <%= render 'boards/ungoodmark', board: @board %>
+<% end %>
