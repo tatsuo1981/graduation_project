@@ -1,5 +1,6 @@
 ja:
   defaults:
+    post: 投稿
     flash_message:
       created: "%{item}を作成しました"
       not_created: "%{item}を作成出来ませんでした"
@@ -33,6 +34,8 @@ ja:
   boards:
     new:
       title: 神泡掲示板作成
+    show:
+      title: 神泡掲示板詳細
   header:
     login: ログイン
     logout: ログアウト
