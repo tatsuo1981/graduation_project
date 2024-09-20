@@ -46,6 +46,8 @@ gem 'carrierwave', '2.2.2'
 
 gem 'faker'
 
+gem 'ransack'
+
 gem 'kaminari', '1.2.2'
 gem 'bootstrap5-kaminari-views'
 
