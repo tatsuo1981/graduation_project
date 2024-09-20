@@ -3,6 +3,7 @@ ja:
     create: 作成
     post: 投稿
     search_word: 検索ワード
+    edit: 編集
     delete_confirm: 削除しますか？
     flash_message:
       created: "%{item}を作成しました"
@@ -54,6 +55,11 @@ ja:
       success: いいねしました
     destroy:
       success: いいねを外しました
+  profiles:
+    show:
+      title: プロフィール
+    edit:
+      title: プロフィール編集
   header:
     login: ログイン
     logout: ログアウト
@@ -62,4 +68,4 @@ ja:
     create_board: 神泡掲示板作成
     bookmark_index: ブックマーク一覧
     goodmark_index: いいね一覧
-    profile: プロフィール編集
+    profile: プロフィール
