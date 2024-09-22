@@ -39,6 +39,15 @@ ja:
     create:
       success: ユーザー登録が完了しました
       failure: ユーザー登録に失敗しました
+  shops:
+    new:
+      title: 掲載店作成
+    show:
+      title: 掲載店詳細
+    index:
+      title: 掲載店一覧
+    edit:
+      title: 掲載店編集
   boards:
     new:
       title: 神泡掲示板作成

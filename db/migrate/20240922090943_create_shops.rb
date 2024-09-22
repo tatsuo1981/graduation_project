@@ -7,7 +7,7 @@ class CreateShops < ActiveRecord::Migration[7.2]
       t.string :tel
       t.integer :price, null: false
       t.references :user, foreign_key: true
- 
+
       t.timestamps
     end
   end

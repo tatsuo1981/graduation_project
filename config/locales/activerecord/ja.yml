@@ -2,7 +2,8 @@ ja:
   activerecord:
     models:
       user: ユーザー
-      board: 掲示板
+      shop: 掲載店
+      board: 神泡掲示板
       comment: コメント
     attributes:
       user:
@@ -13,6 +14,12 @@ ja:
         avatar: アバター
         password: パスワード
         password_confirmation: パスワード確認
+      shop:
+        shop_name: 店名
+        address: 所在地
+        tel: 電話番号
+        shop_hours: 営業時間
+        price: 生ビール（ビール）の価格
       board:
         title: タイトル
         body: 本文
