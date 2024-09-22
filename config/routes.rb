@@ -27,4 +27,6 @@ Rails.application.routes.draw do
   resources :goodmarks, only: %i[create destroy]
   resource :profile, only: %i[show edit update]
   resources :password_resets, only: %i[new create edit update]
+
+  resources :shops, only: %i[index]
 end

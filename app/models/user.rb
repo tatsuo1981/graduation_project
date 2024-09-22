@@ -14,6 +14,7 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :goodmarks, dependent: :destroy
   has_many :goodmark_boards, through: :goodmarks, source: :board
+  has_many :shops, dependent: :destroy
 
   def own?(object)
     id == object&.user_id

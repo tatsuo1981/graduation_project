@@ -72,6 +72,8 @@ ja:
     update:
       success: パスワードを変更しました
   header:
+    shop_index: 掲載店一覧
+    create_shop: 掲載店作成
     login: ログイン
     logout: ログアウト
     board: 神泡掲示板

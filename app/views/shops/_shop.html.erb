@@ -1,0 +1,27 @@
+<div class="col-sm-12 col-lg-4 mb-3">
+  <div id="shop-id-<%= shop.id %>">
+    <div class="card">
+      <%= image_tag "board_placeholder.png", class: "card-img-top", width: "300", height:"200" %>
+      <div class="card-body">
+        <div class="d-flex">
+          <h4 class="card-title">
+            <%= link_to shop.title, '#' %>
+          </h4>
+          <div class='ms-auto'>
+            <%= link_to '#', id: 'button-edit-#{shop.id}' do %>
+              <i class="bi bi-pencil-fill"></i>
+            <% end %>
+            <%= link_to '#', id: 'button-delete-#{shop.id}', method: :delete, data: {confirm: ''} do %>
+              <i class="bi bi-trash-fill"></i>
+            <% end %>
+          </div>
+        </div>
+        <ul class="list-inline">
+          <li><i class="bi bi-person"></i><%= shop.user.decorate.full_name %></li>
+          <li><i class="bi bi-calendar"></i><%= l shop.created_at, format: :short %></li>
+        </ul>
+        <p class="card-text">本文</p>
+      </div>
+    </div>
+  </div>
+</div>
