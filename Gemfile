@@ -48,6 +48,8 @@ gem 'faker'
 
 gem 'ransack'
 
+gem 'config', '4.0.0'
+
 gem 'kaminari', '1.2.2'
 gem 'bootstrap5-kaminari-views'
 
@@ -60,6 +62,8 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem 'letter_opener_web', '~> 2.0'
 end
 
 group :development do
