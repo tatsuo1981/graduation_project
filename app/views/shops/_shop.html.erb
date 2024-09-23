@@ -5,7 +5,7 @@
       <div class="card-body">
         <div class="d-flex">
           <h4 class="card-title">
-            <%= link_to shop.title, '#' %>
+            <%= link_to shop.shop_name, '#' %>
           </h4>
           <div class='ms-auto'>
             <%= link_to '#', id: 'button-edit-#{shop.id}' do %>
@@ -20,7 +20,7 @@
           <li><i class="bi bi-person"></i><%= shop.user.decorate.full_name %></li>
           <li><i class="bi bi-calendar"></i><%= l shop.created_at, format: :short %></li>
         </ul>
-        <p class="card-text">本文</p>
+        <p class="card-text">本</p>
       </div>
     </div>
   </div>
