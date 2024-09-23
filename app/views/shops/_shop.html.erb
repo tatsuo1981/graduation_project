@@ -1,7 +1,7 @@
 <div class="col-sm-12 col-lg-4 mb-3">
   <div id="shop-id-<%= shop.id %>">
     <div class="card">
-      <%= image_tag "board_placeholder.png", class: "card-img-top", width: "300", height:"200" %>
+      <%= image_tag shop.shop_image_url, class: "card-img-top", width: "300", height:"200" %>
       <div class="card-body">
         <div class="d-flex">
           <h4 class="card-title">
@@ -20,7 +20,7 @@
           <li><i class="bi bi-person"></i><%= shop.user.decorate.full_name %></li>
           <li><i class="bi bi-calendar"></i><%= l shop.created_at, format: :short %></li>
         </ul>
-        <p class="card-text">本</p>
+        <p class="card-text">生ビールの価格: <%= number_to_currency(shop.price, unit: "円", format: "%n%u") %></p>
       </div>
     </div>
   </div>

@@ -20,6 +20,7 @@ ja:
         tel: 電話番号
         shop_hours: 営業時間
         price: 生ビール（ビール）の価格
+        shop_image: お店の写真
       board:
         title: タイトル
         body: 本文

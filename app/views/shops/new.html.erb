@@ -22,7 +22,15 @@
         </div>
         <div class="mb-3">
           <%= f.label :price %>
-          <%= f.text_field :price, class: "form-control" %>
+          <div class="input-group">
+            <%= f.text_field :price, class: "form-control" %>
+            <span class="input-group-text">円</span>
+          </div>
+        </div>
+        <div class="mb-3">
+          <%= f.label :shop_image %>
+          <%= f.file_field :shop_image, class: "form-control", accept: 'image/*' %>
+          <%= f.hidden_field :shop_image_cache %>
         </div>
         <%= f.submit nil, class: "btn btn-primary" %>
       <% end %>

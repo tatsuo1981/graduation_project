@@ -24,7 +24,7 @@
           <li><i class="bi bi-person"></i><%= board.user.decorate.full_name %></li>
           <li><i class="bi bi-calendar"></i><%= l board.created_at, format: :short %></li>
         </ul>
-        <p class="card-text">本文</p>
+        <p class="card-text"><%= board.body %></p>
       </div>
     </div>
   </div>

@@ -1,4 +1,6 @@
 class Shop < ApplicationRecord
+  mount_uploader :shop_image, ShopImageUploader
+
   # 必須項目のバリデーション
   validates :shop_name, presence: true
   validates :price, presence: true, numericality: { only_integer: true, greater_than: 0 }
