@@ -48,7 +48,7 @@ gem 'faker'
 
 gem 'ransack'
 
-gem 'config', '4.0.0'
+gem 'config', '5.5.1'
 
 gem 'kaminari', '1.2.2'
 gem 'bootstrap5-kaminari-views'
