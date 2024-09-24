@@ -44,6 +44,10 @@ ja:
       title: 掲載店作成
     show:
       title: 掲載店詳細
+      address: 所在地
+      tel: 電話番号
+      shop_hours: 営業時間
+      price: 生ビール（ビール）の価格
     index:
       title: 掲載店一覧
     edit:

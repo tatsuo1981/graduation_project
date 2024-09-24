@@ -1,0 +1,44 @@
+<div class="container pt-5">
+  <div class="row mb-3">
+    <div class="col-lg-8 offset-lg-2">
+      <h1><%= t('.title') %></h1>
+      <article class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-3">
+              <%= image_tag @shop.shop_image_url, width: "300", height: "200", class: "card-img-top img-fluid" %>
+            </div>
+            <div class="col-md-9">
+              <h3 style="display: inline;"><%= @shop.shop_name %></h3>
+              <!-- 所在地 -->
+              <p class="mt-3"><strong><%= t('shops.show.address') %>:</strong> <%= @shop.address %></p>
+
+              <!-- 電話番号 -->
+              <p><strong><%= t('shops.show.tel') %>:</strong> <%= @shop.tel %></p>
+
+              <!-- 営業時間 -->
+              <p><strong><%= t('shops.show.shop_hours') %>:</strong> <%= @shop.shop_hours %></p>
+
+              <!-- 価格 -->
+              <p><strong><%= t('shops.show.price') %>:</strong> <%= number_to_currency(@shop.price, unit: "円", format: "%n%u") %></p>
+
+              <ul class="list-inline">
+                <li class="list-inline-item"><%= "by #{@shop.user.decorate.full_name}" %></li>
+                <li class="list-inline-item"><%= l @shop.created_at, format: :long %></li>
+              </ul>
+              <div class='d-flex justify-content-end'>
+                <%= link_to "#", id: "button-edit-#{@shop.id}" do %>
+                  <i class='bi bi-pencil-fill'></i>
+                <% end %>
+                <%= link_to "#", id: "button-delete-#{@shop.id}", class: "ms-2" do %>
+                  <i class="bi bi-trash-fill"></i>
+                <% end %>
+              </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
