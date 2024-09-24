@@ -1,6 +1,7 @@
 class ShopsController < ApplicationController
   def index
-    @shops = Shop.includes(:user)
+    @q = Shop.ransack(params[:q])
+    @shops = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   def new
@@ -42,7 +43,8 @@ class ShopsController < ApplicationController
   end
 
   def bookmarks
-    @bookmark_shops = current_user.bookmark_shops.includes(:user).order(created_at: :desc)
+    @q = current_user.bookmark_shops.ransack(params[:q])
+    @bookmark_shops = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   private

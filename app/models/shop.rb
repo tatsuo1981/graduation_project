@@ -19,4 +19,12 @@ class Shop < ApplicationRecord
 
   belongs_to :user
   has_many :bookmarks, dependent: :destroy
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["address", "created_at", "id", "price", "shop_hours", "shop_image", "shop_name", "tel", "updated_at", "user_id"]
+  end
+
+  def self.ransackable_associations(auth_object = nil)
+    ["bookmarks", "user"]
+  end
 end
