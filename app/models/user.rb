@@ -15,9 +15,23 @@ class User < ApplicationRecord
   has_many :goodmarks, dependent: :destroy
   has_many :goodmark_boards, through: :goodmarks, source: :board
   has_many :shops, dependent: :destroy
+  has_many :bookmarks, dependent: :destroy
+  has_many :bookmark_shops, through: :bookmarks, source: :shop
 
   def own?(object)
     id == object&.user_id
+  end
+
+  def bookmark(shop)
+    bookmark_shops << shop
+  end
+
+  def unbookmark(shop)
+    bookmark_shops.destroy(shop)
+  end
+
+  def bookmark?(shop)
+    bookmark_shops.include?(shop)
   end
 
   def goodmark(board)

@@ -41,6 +41,10 @@ class ShopsController < ApplicationController
     redirect_to shops_path, success: t('defaults.flash_message.deleted', item: Shop.model_name.human), status: :see_other
   end
 
+  def bookmarks
+    @bookmark_shops = current_user.bookmark_shops.includes(:user).order(created_at: :desc)
+  end
+
   private
 
   def shop_params

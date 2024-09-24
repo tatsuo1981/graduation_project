@@ -28,5 +28,10 @@ Rails.application.routes.draw do
   resource :profile, only: %i[show edit update]
   resources :password_resets, only: %i[new create edit update]
 
-  resources :shops, only: %i[index new create show edit update destroy]
+  resources :shops, only: %i[index new create show edit update destroy] do
+    collection do
+      get :bookmarks
+    end
+  end
+  resources :bookmarks, only: %i[create destroy]
 end

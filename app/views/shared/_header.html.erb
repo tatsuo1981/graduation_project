@@ -9,7 +9,7 @@
     <div class='collapse navbar-collapse' id='navbarSupportedContent'>
       <ul class='navbar-nav ms-auto main-nav align-items-center'>
         <li class='nav-item dropdown dropdown-slide'>
-          <%= link_to 'お店掲示板', '#', class: 'nav-link dropdown-toggle', 'data-bs-toggle': 'dropdown', 'aria-haspopup': 'true', 'aria-expanded': 'false' %>
+          <%= link_to t('header.shop'), '#', class: 'nav-link dropdown-toggle', 'data-bs-toggle': 'dropdown', 'aria-haspopup': 'true', 'aria-expanded': 'false' %>
           <div class='dropdown-menu dropdown-menu-end'>
             <%= link_to t('header.shop_index'), shops_path, class: 'dropdown-item' %>
             <%= link_to t('header.create_shop'), new_shop_path, class: 'dropdown-item' %>
@@ -25,7 +25,7 @@
         </li>
 
         <li class='nav-item'>
-          <%= link_to t('header.bookmark_index'), '#', class: 'nav-link' %>
+          <%= link_to t('header.bookmark_index'), bookmarks_shops_path, class: 'nav-link' %>
         </li>
 
         <li class='nav-item'>

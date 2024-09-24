@@ -50,8 +50,17 @@ ja:
       price: 生ビール（ビール）の価格
     index:
       title: 掲載店一覧
+      no_result: 掲載店がありません
     edit:
       title: 掲載店編集
+    bookmarks:
+      title: ブックマーク一覧
+      no_result: ブックマーク中の掲載店がありません。
+  bookmarks:
+    create:
+      success: ブックマークしました
+    destroy:
+      success: ブックマークを外しました
   boards:
     new:
       title: 神泡掲示板作成
@@ -85,6 +94,7 @@ ja:
     update:
       success: パスワードを変更しました
   header:
+    shop: 掲載店
     shop_index: 掲載店一覧
     create_shop: 掲載店作成
     login: ログイン
