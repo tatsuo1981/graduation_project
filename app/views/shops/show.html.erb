@@ -1,3 +1,4 @@
+<% content_for(:title, @shop.shop_name) %>
 <div class="container pt-5">
   <div class="row mb-3">
     <div class="col-lg-8 offset-lg-2">
@@ -26,14 +27,16 @@
                 <li class="list-inline-item"><%= "by #{@shop.user.decorate.full_name}" %></li>
                 <li class="list-inline-item"><%= l @shop.created_at, format: :long %></li>
               </ul>
-              <div class='d-flex justify-content-end'>
-                <%= link_to "#", id: "button-edit-#{@shop.id}" do %>
-                  <i class='bi bi-pencil-fill'></i>
-                <% end %>
-                <%= link_to "#", id: "button-delete-#{@shop.id}", class: "ms-2" do %>
-                  <i class="bi bi-trash-fill"></i>
-                <% end %>
-              </div>
+              <% if current_user.own?(@shop) %>
+                <div class='d-flex justify-content-end'>
+                  <%= link_to edit_shop_path(@shop), id: "button-edit-#{@shop.id}" do %>
+                    <i class='bi bi-pencil-fill'></i>
+                  <% end %>
+                  <%= link_to shop_path(@shop), id: "button-delete-#{@shop.id}", data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_confirm') } do %>
+                    <i class="bi bi-trash-fill"></i>
+                  <% end %>
+                </div>
+              <% end %>
               </div>
             </div>
           </div>

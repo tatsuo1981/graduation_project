@@ -21,6 +21,26 @@ class ShopsController < ApplicationController
     @shop = Shop.find(params[:id])
   end
 
+  def edit
+    @shop = current_user.shops.find(params[:id])
+  end
+
+  def update
+    @shop = current_user.shops.find(params[:id])
+    if @shop.update(shop_params)
+      redirect_to shop_path(@shop), success: t('defaults.flash_message.updated', item: Shop.model_name.human)
+    else
+      flash.now[:danger] = t('defaults.flash_message.not_updated', item: Shop.model_name.human)
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    shop = current_user.shops.find(params[:id])
+    shop.destroy!
+    redirect_to shops_path, success: t('defaults.flash_message.deleted', item: Shop.model_name.human), status: :see_other
+  end
+
   private
 
   def shop_params
