@@ -68,6 +68,7 @@ ja:
       title: 神泡掲示板詳細
     index:
       title: 神泡掲示板一覧
+      no_result: 神泡掲示板がありません
     edit:
       title: 神泡掲示板編集
     goodmarks:

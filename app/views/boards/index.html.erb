@@ -13,7 +13,7 @@
         <% if @boards.present? %>
           <%= render @boards %>
         <% else %>
-          <div class="mb-3">掲示板がありません</div>
+          <div class="mb-3"><%= t('boards.index.no_result') %></div>
         <% end %>
       </div>
       <%= paginate @boards, theme: 'bootstrap-5' %>

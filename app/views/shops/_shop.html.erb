@@ -24,7 +24,7 @@
           <li><i class="bi bi-person"></i><%= shop.user.decorate.full_name %></li>
           <li><i class="bi bi-calendar"></i><%= l shop.created_at, format: :short %></li>
         </ul>
-        <p class="card-text">生ビールの価格: <%= number_to_currency(shop.price, unit: "円", format: "%n%u") %></p>
+        <p class="card-text"><%= t('shops.show.price') %>:<%= number_to_currency(shop.price, unit: "円", format: "%n%u") %></p>
       </div>
     </div>
   </div>
