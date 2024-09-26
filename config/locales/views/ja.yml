@@ -13,6 +13,7 @@ ja:
       not_updated: "%{item}を更新出来ませんでした"
       deleted: "%{item}を削除しました"
       require_login: ログインしてください
+      not_authorized: 権限がありません
   helpers:
     submit:
       create: 登録
@@ -106,3 +107,16 @@ ja:
     bookmark_index: ブックマーク一覧
     goodmark_index: いいね一覧
     profile: プロフィール
+  admin:
+    user_sessions:
+      new:
+        title: ログイン
+        login: ログイン
+      create:
+        success: ログインしました
+        failure: ログインに失敗しました
+      destroy:
+        success: ログアウトしました
+    dashboards:
+      index:
+        title: ダッシュボード

@@ -18,6 +18,8 @@ class User < ApplicationRecord
   has_many :bookmarks, dependent: :destroy
   has_many :bookmark_shops, through: :bookmarks, source: :shop
 
+  enum role: { general: 0, admin: 1 }
+
   def own?(object)
     id == object&.user_id
   end

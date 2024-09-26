@@ -34,4 +34,12 @@ Rails.application.routes.draw do
     end
   end
   resources :bookmarks, only: %i[create destroy]
+
+  namespace :admin do
+    root "dashboards#index"
+    resource :dashboard, only: %i[index]
+    get 'login' => 'user_sessions#new', :as => :login
+    post 'login' => "user_sessions#create"
+    delete 'logout' => 'user_sessions#destroy', :as => :logout
+  end
 end
