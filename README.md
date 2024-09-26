@@ -1,7 +1,7 @@
 # README
 
 ### 画面遷移図
-Figma：https://www.figma.com/design/GHiW9Zy1Vkq27F16GXmS78/%E7%84%A1%E9%A1%8C?node-id=0-1&t=S7cCW0CK9sM7Vjcj-1
+Figma：https://www.figma.com/design/GHiW9Zy1Vkq27F16GXmS78/%E7%84%A1%E9%A1%8C?node-id=0-1&t=ELyza3F5eXclyBGK-1
 
 ### READMEに記載した機能
 - [✔] ユーザー登録機能
