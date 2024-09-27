@@ -4,8 +4,11 @@ ja:
     post: 投稿
     search_word: 検索ワード
     edit: 編集
+    show: 詳細
+    delete: 削除
     delete_confirm: 削除しますか？
     password_reset: パスワードリセット
+    unspecified: 指定なし
     flash_message:
       created: "%{item}を作成しました"
       not_created: "%{item}を作成出来ませんでした"
@@ -120,3 +123,24 @@ ja:
     dashboards:
       index:
         title: ダッシュボード
+    users:
+      index:
+        title: ユーザー一覧
+      edit:
+        title: ユーザー編集
+      show:
+        title: ユーザー詳細
+    shops:
+      index:
+        title: 掲載店一覧
+      edit:
+        title: 掲載店編集
+      show:
+        title: 掲載店詳細
+    boards:
+      index:
+        title: 神泡掲示板一覧
+      edit:
+        title: 神泡掲示板編集
+      show:
+        title: 神泡掲示板詳細

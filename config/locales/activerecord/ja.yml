@@ -14,6 +14,7 @@ ja:
         avatar: アバター
         password: パスワード
         password_confirmation: パスワード確認
+        role: 権限
       shop:
         shop_name: 店名
         address: 所在地
@@ -21,9 +22,20 @@ ja:
         shop_hours: 営業時間
         price: 生ビール（ビール）の価格
         shop_image: お店の写真
+        user: 作成者
       board:
         title: タイトル
         body: 本文
         board_image: サムネイル
+        user: 作成者
       comment:
         body: コメント
+      attributes:
+        id: ID
+        created_at: 作成日時
+        updated_at: 更新日時
+      enums:
+        user:
+          role:
+            general: 一般
+            admin: 管理者

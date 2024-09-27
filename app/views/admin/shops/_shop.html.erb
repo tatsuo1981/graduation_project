@@ -1,0 +1,19 @@
+<tr>
+  <td class="p-2">
+    <%= shop.id %>
+  </td>
+  <td class="p-2">
+    <%= shop.shop_name %>
+  </td>
+  <td class="p-2">
+    <%= shop.user.decorate.full_name %>
+  </td>
+  <td class="p-2">
+    <%= l shop.created_at, format: :long %>
+  </td>
+  <td class="p-2">
+    <%= link_to t('defaults.show'), admin_shop_path(shop), class: 'btn btn-info' %>
+    <%= link_to t('defaults.edit'), edit_admin_shop_path(shop), class: 'btn btn-success' %>
+    <%= link_to t('defaults.delete'), admin_shop_path(shop), data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_confirm') }, class: 'btn btn-danger' %>
+  </td>
+</tr>

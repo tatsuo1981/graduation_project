@@ -41,5 +41,8 @@ Rails.application.routes.draw do
     get 'login' => 'user_sessions#new', :as => :login
     post 'login' => "user_sessions#create"
     delete 'logout' => 'user_sessions#destroy', :as => :logout
+    resources :boards, only: %i[index edit update show destroy]
+    resources :users, only: %i[index edit update show destroy]
+    resources :shops, only: %i[index edit update show destroy]
   end
 end

@@ -50,6 +50,8 @@ gem 'ransack'
 
 gem 'config', '4.0.0'
 
+gem 'enum_help', '0.0.19'
+
 gem 'kaminari', '1.2.2'
 gem 'bootstrap5-kaminari-views'
 

@@ -2,21 +2,21 @@
   <div class="position-sticky pt-3 sidebar-sticky">
     <ul class="nav flex-column">
       <li class="nav-item">
-        <%= link_to '#', class: 'nav-link' do %>
+        <%= link_to admin_users_path, class: "nav-link #{active_if('admin/users')}" do %>
           <i class="bi bi-file-earmark"></i>
-          <%= User.model_name.human %>
+          <%= t('admin.users.index.title') %>
         <% end %>
       </li>
       <li class="nav-item">
-        <%= link_to '#', class: 'nav-link' do %>
+        <%= link_to admin_shops_path, class: "nav-link #{active_if('admin/shops')}" do %>
           <i class="bi bi-person"></i>
-          <%= Shop.model_name.human %>
+          <%= t('admin.shops.index.title') %>
         <% end %>
       </li>
       <li class="nav-item">
-        <%= link_to '#', class: 'nav-link' do %>
+        <%= link_to admin_boards_path, class: "nav-link #{active_if('admin/boards')}" do %>
           <i class="bi bi-person"></i>
-          <%= Board.model_name.human %>
+          <%= t('admin.boards.index.title') %>
         <% end %>
       </li>
     </ul>

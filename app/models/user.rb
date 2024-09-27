@@ -24,6 +24,14 @@ class User < ApplicationRecord
     id == object&.user_id
   end
 
+  def self.ransackable_attributes(auth_object = nil)
+    ["first_name", "last_name", "email", "created_at", "role"] # 必要に応じて検索可能にしたい属性を追加
+  end
+
+  def self.ransackable_associations(auth_object = nil)
+    ["boards", "bookmark_shops", "bookmarks", "comments", "goodmark_boards", "goodmarks", "shops"]
+  end
+
   def bookmark(shop)
     bookmark_shops << shop
   end

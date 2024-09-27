@@ -163,6 +163,8 @@ GEM
       dry-initializer (~> 3.0)
       dry-schema (>= 1.12, < 2)
       zeitwerk (~> 2.6)
+    enum_help (0.0.19)
+      activesupport (>= 3.0.0)
     erubi (1.13.0)
     faker (3.4.2)
       i18n (>= 1.8.11, < 2)
@@ -419,6 +421,7 @@ DEPENDENCIES
   cssbundling-rails
   debug
   draper (= 4.0.2)
+  enum_help (= 0.0.19)
   faker
   jbuilder
   jsbundling-rails
