@@ -44,7 +44,7 @@ class ShopImageUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
-  def default_url
-    'board_placeholder'
+  def default_url(*args)
+    ActionController::Base.helpers.asset_path("board_placeholder.png")
   end
 end
