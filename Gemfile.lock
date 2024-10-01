@@ -122,6 +122,10 @@ GEM
       irb (~> 1.10)
       reline (>= 0.3.8)
     deep_merge (1.2.2)
+    dotenv (3.1.4)
+    dotenv-rails (3.1.4)
+      dotenv (= 3.1.4)
+      railties (>= 6.1)
     draper (4.0.2)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
@@ -166,6 +170,7 @@ GEM
     enum_help (0.0.19)
       activesupport (>= 3.0.0)
     erubi (1.13.0)
+    excon (0.111.0)
     faker (3.4.2)
       i18n (>= 1.8.11, < 2)
     faraday (2.11.0)
@@ -174,6 +179,23 @@ GEM
     faraday-net_http (3.3.0)
       net-http
     ffi (1.17.0-x86_64-linux-gnu)
+    fog-aws (3.27.0)
+      base64 (~> 0.2.0)
+      fog-core (~> 2.1)
+      fog-json (~> 1.1)
+      fog-xml (~> 0.1)
+    fog-core (2.5.0)
+      builder
+      excon (~> 0.71)
+      formatador (>= 0.2, < 2.0)
+      mime-types
+    fog-json (1.2.0)
+      fog-core
+      multi_json (~> 1.10)
+    fog-xml (0.1.4)
+      fog-core
+      nokogiri (>= 1.5.11, < 2.0.0)
+    formatador (1.1.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
     hashie (5.0.0)
@@ -228,6 +250,9 @@ GEM
       net-smtp
     marcel (1.0.4)
     matrix (0.4.2)
+    mime-types (3.5.2)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2024.0903)
     mini_magick (4.13.2)
     mini_mime (1.1.5)
     minitest (5.25.1)
@@ -420,9 +445,11 @@ DEPENDENCIES
   config (= 4.0.0)
   cssbundling-rails
   debug
+  dotenv-rails
   draper (= 4.0.2)
   enum_help (= 0.0.19)
   faker
+  fog-aws
   jbuilder
   jsbundling-rails
   kaminari (= 1.2.2)
