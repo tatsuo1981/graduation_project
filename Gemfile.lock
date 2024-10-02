@@ -449,7 +449,7 @@ DEPENDENCIES
   draper (= 4.0.2)
   enum_help (= 0.0.19)
   faker
-  fog-aws
+  fog-aws (~> 3.14)
   jbuilder
   jsbundling-rails
   kaminari (= 1.2.2)
