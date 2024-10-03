@@ -42,7 +42,7 @@ gem 'rails-i18n', '~> 7.0.0'
 
 gem 'draper', '4.0.2'
 
-gem 'carrierwave', '2.2.2'
+gem 'carrierwave', '~> 2.2.3'
 
 gem 'fog-aws', '~> 3.14'
 
