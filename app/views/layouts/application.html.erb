@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <!-- OGP設定 -->
+    <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : '激安!!生麦酒店投' %>">
+    <meta property="og:description" content="教えてください！！安いビールのお店">
+    <meta property="og:image" content="https://t-style.s3.ap-northeast-1.amazonaws.com/IMG_7165.JPG">
+    <meta property="og:url" content="<%= request.original_url %>">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="激安!!生麦酒店投">
+
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
     <%#= javascript_include_tag "application", "data-turbo-track": "reload", defer: trueを
