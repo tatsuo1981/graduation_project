@@ -44,7 +44,7 @@ gem 'draper', '4.0.2'
 
 gem 'carrierwave', '~> 2.2.3'
 
-gem 'fog-aws', '~> 3.14'
+gem 'fog-aws', '~> 3.29'
 
 gem 'dotenv-rails'
 
