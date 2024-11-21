@@ -52,7 +52,7 @@ gem 'faker'
 
 gem 'ransack'
 
-gem 'config', '4.0.0'
+gem 'config', '5.5.2'
 
 gem 'enum_help', '0.0.19'
 
