@@ -11,7 +11,7 @@
     <div class="col-12">
       <div class="row">
         <% if @shops.present? %>
-          <%= render @shops %>
+          <%= render partial: 'shop', collection: @shops, as: :shop %>
         <% else %>
           <div class="mb-3"><%= t('shops.index.no_result') %></div>
         <% end %>

@@ -31,6 +31,8 @@ class Admin::UsersController < Admin::BaseController
   end
 
   def user_params
-    params.require(:user).permit(:email, :last_name, :first_name, :avatar, :avatar_cache, :role)
+    allowed = [ :email, :last_name, :first_name, :avatar, :avatar_cache ]
+    allowed << :role if current_user.admin?  # ここで管理者かどうかチェック！
+    params.require(:user).permit(allowed)
   end
 end

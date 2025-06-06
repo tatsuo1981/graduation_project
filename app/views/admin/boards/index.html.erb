@@ -19,7 +19,7 @@
         </tr>
         </thead>
         <tbody>
-        <%= render @boards %>
+        <%= render partial: 'board', collection: @boards, as: :board %>
         </tbody>
       </table>
     </div>

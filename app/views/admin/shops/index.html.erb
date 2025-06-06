@@ -19,7 +19,7 @@
         </tr>
         </thead>
         <tbody>
-        <%= render @shops %>
+        <%= render partial: 'shop', collection: @shops, as: :shop %>
         </tbody>
       </table>
     </div>
