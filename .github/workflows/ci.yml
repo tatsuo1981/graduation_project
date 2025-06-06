@@ -20,7 +20,10 @@ jobs:
           bundler-cache: true
 
       - name: Run Brakeman and save report
-        run: bin/brakeman --format html --output brakeman-report.html
+        run: bundle exec brakeman --format html --output brakeman-report.html
+
+      - name: Check if report file exists
+        run: ls -lh brakeman-report.html || echo "brakeman-report.html が見つかりませんでした"
 
       - name: Upload Brakeman report as artifact
         uses: actions/upload-artifact@v4
