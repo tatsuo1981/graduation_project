@@ -12,11 +12,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  root 'static_pages#top'
+  root "static_pages#top"
   resources :users, only: %i[new create]
-  get 'login', to: 'user_sessions#new', as: :login
-  post 'login', to: 'user_sessions#create'
-  delete 'logout', to: 'user_sessions#destroy', as: :logout
+  get "login", to: "user_sessions#new", as: :login
+  post "login", to: "user_sessions#create"
+  delete "logout", to: "user_sessions#destroy", as: :logout
 
   resources :boards, only: %i[index new create show edit update destroy] do
     resources :comments, only: %i[create edit destroy], shallow: true
@@ -38,9 +38,9 @@ Rails.application.routes.draw do
   namespace :admin do
     root "dashboards#index"
     resource :dashboard, only: %i[index]
-    get 'login' => 'user_sessions#new', :as => :login
-    post 'login' => "user_sessions#create"
-    delete 'logout' => 'user_sessions#destroy', :as => :logout
+    get "login" => "user_sessions#new", :as => :login
+    post "login" => "user_sessions#create"
+    delete "logout" => "user_sessions#destroy", :as => :logout
     resources :boards, only: %i[index edit update show destroy]
     resources :users, only: %i[index edit update show destroy]
     resources :shops, only: %i[index edit update show destroy]

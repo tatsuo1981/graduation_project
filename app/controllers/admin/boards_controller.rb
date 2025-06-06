@@ -10,9 +10,9 @@ class Admin::BoardsController < Admin::BaseController
 
   def update
     if @board.update(board_params)
-      redirect_to admin_board_path(@board), success: t('defaults.flash_message.updated', item: Board.model_name.human)
+      redirect_to admin_board_path(@board), success: t("defaults.flash_message.updated", item: Board.model_name.human)
     else
-      flash.now['danger'] = t('defaults.flash_message.not_updated', item: Board.model_name.human)
+      flash.now["danger"] = t("defaults.flash_message.not_updated", item: Board.model_name.human)
       render :edit
     end
   end
@@ -21,7 +21,7 @@ class Admin::BoardsController < Admin::BaseController
 
   def destroy
     @board.destroy!
-    redirect_to admin_boards_path, success: t('defaults.flash_message.deleted', item: Board.model_name.human), status: :see_other
+    redirect_to admin_boards_path, success: t("defaults.flash_message.deleted", item: Board.model_name.human), status: :see_other
   end
 
   private

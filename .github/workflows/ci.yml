@@ -19,8 +19,14 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
-      - name: Scan for common Rails security vulnerabilities using static analysis
-        run: bin/brakeman --no-pager
+      - name: Run Brakeman and save report
+        run: bin/brakeman --format html --output brakeman-report.html
+
+      - name: Upload Brakeman report as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: brakeman-report
+          path: brakeman-report.html
 
   lint:
     runs-on: ubuntu-latest

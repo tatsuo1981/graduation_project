@@ -12,19 +12,19 @@ class Shop < ApplicationRecord
   validates :tel, format: { with: /\A0\d{1,4}-?\d{1,4}-?\d{4}\z/, message: "は正しい形式で入力してください（例: 03-1234-5678）" }, allow_blank: true
 
   # 営業時間のバリデーション
-  validates :shop_hours, format: { 
-  with: /\A(?:\d{1,2}:\d{2}\s?[-ー~〜]\s?\d{1,2}:\d{2}(?:,\s?|\s?&\s?|\s?と\s?)?)+\z/, 
-  message: "は正しい形式で入力してください（例: 10:00 - 18:00、10:00 〜 18:00）" 
+  validates :shop_hours, format: {
+  with: /\A(?:\d{1,2}:\d{2}\s?[-ー~〜]\s?\d{1,2}:\d{2}(?:,\s?|\s?&\s?|\s?と\s?)?)+\z/,
+  message: "は正しい形式で入力してください（例: 10:00 - 18:00、10:00 〜 18:00）"
   }, allow_blank: true
 
   belongs_to :user
   has_many :bookmarks, dependent: :destroy
 
   def self.ransackable_attributes(auth_object = nil)
-    ["address", "created_at", "id", "price", "shop_hours", "shop_image", "shop_name", "tel", "updated_at", "user_id"]
+    [ "address", "created_at", "id", "price", "shop_hours", "shop_image", "shop_name", "tel", "updated_at", "user_id" ]
   end
 
   def self.ransackable_associations(auth_object = nil)
-    ["bookmarks", "user"]
+    [ "bookmarks", "user" ]
   end
 end

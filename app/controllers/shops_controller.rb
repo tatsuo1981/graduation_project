@@ -11,9 +11,9 @@ class ShopsController < ApplicationController
   def create
     @shop = current_user.shops.build(shop_params)
     if @shop.save
-      redirect_to shops_path, success: t('defaults.flash_message.created', item: Shop.model_name.human)
+      redirect_to shops_path, success: t("defaults.flash_message.created", item: Shop.model_name.human)
     else
-      flash.now[:danger] = t('defaults.flash_message.not_created', item: Shop.model_name.human)
+      flash.now[:danger] = t("defaults.flash_message.not_created", item: Shop.model_name.human)
       render :new, status: :unprocessable_entity
     end
   end
@@ -29,9 +29,9 @@ class ShopsController < ApplicationController
   def update
     @shop = current_user.shops.find(params[:id])
     if @shop.update(shop_params)
-      redirect_to shop_path(@shop), success: t('defaults.flash_message.updated', item: Shop.model_name.human)
+      redirect_to shop_path(@shop), success: t("defaults.flash_message.updated", item: Shop.model_name.human)
     else
-      flash.now[:danger] = t('defaults.flash_message.not_updated', item: Shop.model_name.human)
+      flash.now[:danger] = t("defaults.flash_message.not_updated", item: Shop.model_name.human)
       render :edit, status: :unprocessable_entity
     end
   end
@@ -39,7 +39,7 @@ class ShopsController < ApplicationController
   def destroy
     shop = current_user.shops.find(params[:id])
     shop.destroy!
-    redirect_to shops_path, success: t('defaults.flash_message.deleted', item: Shop.model_name.human), status: :see_other
+    redirect_to shops_path, success: t("defaults.flash_message.deleted", item: Shop.model_name.human), status: :see_other
   end
 
   def bookmarks

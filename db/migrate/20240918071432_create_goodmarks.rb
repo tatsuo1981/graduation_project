@@ -6,6 +6,6 @@ class CreateGoodmarks < ActiveRecord::Migration[7.2]
 
       t.timestamps
     end
-    add_index :goodmarks, [:user_id, :board_id], unique: true
+    add_index :goodmarks, [ :user_id, :board_id ], unique: true
   end
 end

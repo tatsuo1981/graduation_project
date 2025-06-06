@@ -10,9 +10,9 @@ class Admin::UsersController < Admin::BaseController
 
   def update
     if @user.update(user_params)
-      redirect_to admin_user_path(@user), success: t('defaults.flash_message.updated', item: User.model_name.human)
+      redirect_to admin_user_path(@user), success: t("defaults.flash_message.updated", item: User.model_name.human)
     else
-      flash.now['danger'] = t('defaults.not_updated', item: User.model_name.human)
+      flash.now["danger"] = t("defaults.not_updated", item: User.model_name.human)
       render :edit
     end
   end
@@ -21,7 +21,7 @@ class Admin::UsersController < Admin::BaseController
 
   def destroy
     @user.destroy!
-    redirect_to admin_users_path, success: t('defaults.flash_message.deleted', item: User.model_name.human), status: :see_other
+    redirect_to admin_users_path, success: t("defaults.flash_message.deleted", item: User.model_name.human), status: :see_other
   end
 
   private

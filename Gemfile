@@ -38,26 +38,26 @@ gem "bootsnap", require: false
 
 gem "sorcery"
 
-gem 'rails-i18n', '~> 7.0.0'
+gem "rails-i18n", "~> 7.0.0"
 
-gem 'draper', '4.0.2'
+gem "draper", "4.0.2"
 
-gem 'carrierwave', '~> 2.2.3'
+gem "carrierwave", "~> 2.2.3"
 
-gem 'fog-aws', '~> 3.14'
+gem "fog-aws", "~> 3.14"
 
-gem 'dotenv-rails'
+gem "dotenv-rails"
 
-gem 'faker'
+gem "faker"
 
-gem 'ransack'
+gem "ransack"
 
-gem 'config', '4.0.0'
+gem "config", "4.0.0"
 
-gem 'enum_help', '0.0.19'
+gem "enum_help", "0.0.19"
 
-gem 'kaminari', '1.2.2'
-gem 'bootstrap5-kaminari-views'
+gem "kaminari", "1.2.2"
+gem "bootstrap5-kaminari-views"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -69,7 +69,9 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 
-  gem 'letter_opener_web', '~> 2.0'
+  gem "letter_opener_web", "~> 2.0"
+
+  gem "rspec-rails"
 end
 
 group :development do

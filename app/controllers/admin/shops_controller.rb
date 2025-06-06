@@ -10,9 +10,9 @@ class Admin::ShopsController < Admin::BaseController
 
   def update
     if @shop.update(shop_params)
-      redirect_to admin_shop_path(@shop), success: t('defaults.flash_message.updated', item: Shop.model_name.human)
+      redirect_to admin_shop_path(@shop), success: t("defaults.flash_message.updated", item: Shop.model_name.human)
     else
-      flash.now['danger'] = t('defaults.flash_message.not_updated', item: Shop.model_name.human)
+      flash.now["danger"] = t("defaults.flash_message.not_updated", item: Shop.model_name.human)
       render :edit
     end
   end
@@ -21,7 +21,7 @@ class Admin::ShopsController < Admin::BaseController
 
   def destroy
     @shop.destroy!
-    redirect_to admin_shops_path, success: t('defaults.flash_message.deleted', item: Shop.model_name.human), status: :see_other
+    redirect_to admin_shops_path, success: t("defaults.flash_message.deleted", item: Shop.model_name.human), status: :see_other
   end
 
   private
