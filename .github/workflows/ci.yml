@@ -19,6 +19,9 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
+      - name: Install Brakeman
+        run: gem install brakeman
+
       - name: Run Brakeman and save report
         run: bundle exec brakeman --format html --output brakeman-report.html
 
