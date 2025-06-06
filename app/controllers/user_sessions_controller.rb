@@ -4,7 +4,9 @@ class UserSessionsController < ApplicationController
   def new; end
 
   def create
-    @user = login(params[:email], params[:password])
+    email = params[:email]
+    password = params[:password]
+    @user = login(email, password)
 
     if @user
       redirect_to shops_path, success: t('user_sessions.create.success')
