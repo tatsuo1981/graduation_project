@@ -1,18 +1,18 @@
 services:
   - type: web
-    name: myapp
+    name: T.style
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: myapp-db
+          name: t_style_db
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
 
 databases:
-  - name: myapp-db
-    databaseName: myapp
-    user: myapp
+  - name: t_style_db
+    databaseName: t_style_db
+    user: t_style_db_user
